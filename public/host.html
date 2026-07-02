@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>מסך הקרנה - תוצאות הצבעה</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="host-wrap">
+    <h1>הצבעה חיה</h1>
+    <div class="host-question" id="question">אין שאלה פעילה</div>
+    <div id="closedBanner" class="closed-banner" style="display:none">ההצבעה סגורה</div>
+
+    <div class="results">
+      <div class="result-row">
+        <div class="result-label">כן</div>
+        <div class="bar-track"><div class="bar-fill yes" id="bar-yes">0</div></div>
+      </div>
+      <div class="result-row">
+        <div class="result-label">לא</div>
+        <div class="bar-track"><div class="bar-fill no" id="bar-no">0</div></div>
+      </div>
+      <div class="result-row">
+        <div class="result-label">תלוי</div>
+        <div class="bar-track"><div class="bar-fill unsure" id="bar-unsure">0</div></div>
+      </div>
+    </div>
+    <div class="total-line" id="total">סה"כ הצביעו: 0</div>
+
+    <div class="admin-panel">
+      <input type="text" id="questionInput" placeholder="טקסט השאלה (רשות - אפשר גם לשאול בעל פה)" />
+      <div class="admin-buttons">
+        <button class="primary" id="newQuestionBtn">התחל הצבעה חדשה</button>
+        <button id="closeBtn">סגור הצבעה</button>
+        <button id="reopenBtn">פתח הצבעה מחדש</button>
+        <button class="danger" id="resetBtn">אפס תוצאות</button>
+      </div>
+      <div class="hint">כתובת להצבעה מהטלפון: <span id="voteUrl"></span></div>
+    </div>
+  </div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/host.js"></script>
+</body>
+</html>
