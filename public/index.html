@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>הצבעה</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="voter-wrap">
+    <h1>הצבעה חיה</h1>
+    <div class="question-box" id="question">ממתינים לשאלה מהמנחה...</div>
+    <div class="choices">
+      <button class="choice-btn" data-choice="yes" disabled>כן</button>
+      <button class="choice-btn" data-choice="no" disabled>לא</button>
+      <button class="choice-btn" data-choice="unsure" disabled>תלוי</button>
+    </div>
+    <div class="status-line" id="status"></div>
+  </div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/voter.js"></script>
+</body>
+</html>
